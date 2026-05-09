@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import avatar from '../assets/avatar.jpg'
+import avatar from '../assets/avatar.jpeg'
 
 const COMMANDS = [
   { prompt: 'whoami', output: 'Gerald Ho' },
@@ -113,12 +113,13 @@ export default function Hero() {
         </div>
 
         {/* right — photo */}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center -ml-32">
           <div className="relative">
             <img
               src={avatar}
               alt="Gerald Ho"
-              className="w-64 h-64 object-cover rounded grayscale"
+              className="w-96 h-96 object-cover rounded"
+              style={{ filter: 'grayscale(80%) '}}
             />
             {/* green offset border accent */}
             <div className="absolute -bottom-2 -right-2 w-full h-full border border-[#4ade80] rounded pointer-events-none" />
